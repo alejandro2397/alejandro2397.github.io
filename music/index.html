@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10101a"><meta name="description" content="Reproductor de música local que funciona sin internet.">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+<title>Ritmo Offline</title>
+</head>
+<body>
+<header><div class="brand"><div class="logo">♫</div><div><h1>Ritmo Offline</h1><p>Tu música, sin conexión</p></div></div><span id="net" class="pill">● Preparado</span></header>
+<main>
+<section class="hero"><p class="eyebrow">TU BIBLIOTECA PERSONAL</p><h2>Que nunca pare<br>la música.</h2><p class="muted">Abre canciones guardadas en tu teléfono. Después de cargar la app una vez, la interfaz queda disponible sin internet.</p>
+<div class="actions"><label class="primary" for="files">＋ Añadir canciones</label><input id="files" type="file" accept="audio/*,.mp3,.m4a,.ogg,.wav,.flac,.aac,.opus" multiple><button id="folder" class="secondary">▤ Elegir carpeta</button></div>
+<p class="hint">Compatible con MP3, M4A, WAV, OGG y otros formatos que admita tu navegador.</p></section>
+<section class="library"><div class="section-head"><div><p class="eyebrow">AHORA EN TU DISPOSITIVO</p><h2>Mi música <span id="count" class="count">0</span></h2></div><button id="clear" class="text-button">Vaciar lista</button></div>
+<div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Buscar canción o archivo…" autocomplete="off"></div>
+<div id="empty" class="empty"><div class="empty-icon">♫</div><h3>Tu lista está esperando</h3><p>Agrega música desde tu teléfono para empezar a escucharla.</p></div><div id="tracks" class="tracks"></div></section>
+<section class="tips"><strong>🎧 Escucha sin internet</strong><p>Los archivos se reproducen directamente desde tu teléfono; no se suben a ningún servidor. Para volver a encontrarlos, selecciónalos otra vez al abrir la app.</p></section>
+</main>
+<footer>Ritmo Offline · Música local, sin cuentas y sin anuncios.</footer>
+<div class="player" id="player"><div class="now"><div class="cover" id="cover">♫</div><div class="now-text"><strong id="nowTitle">Elige una canción</strong><span id="nowSub">Tu reproductor está listo</span></div></div>
+<div class="controls"><div class="transport"><button id="shuffle" aria-label="Aleatorio" title="Aleatorio">⤨</button><button id="prev" aria-label="Anterior">⏮</button><button id="play" class="play" aria-label="Reproducir">▶</button><button id="next" aria-label="Siguiente">⏭</button><button id="repeat" aria-label="Repetir" title="Repetir apagado">↻</button></div><div class="timeline"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="1000" value="0" aria-label="Progreso"><span id="duration">0:00</span></div></div>
+<div class="volume"><span>🔊</span><input id="vol" type="range" min="0" max="1" step=".01" value=".85" aria-label="Volumen"></div>
+<audio id="audio" preload="metadata"></audio></div>
+<script src="app.js"></script>
+</body></html>
