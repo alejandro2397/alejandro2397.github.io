@@ -1,0 +1,11 @@
+{
+  "name": "Ritmo Offline - Reproductor de música",
+  "short_name": "Ritmo Offline",
+  "description": "Reproduce música guardada en tu teléfono, sin conexión.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#10101a",
+  "theme_color": "#10101a",
+  "icons": []
+}
